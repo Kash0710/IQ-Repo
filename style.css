@@ -119,7 +119,15 @@ background-image: linear-gradient(skyblue,blue);
     
 }
 .login-edit{
-    text-decoration: none;
-    background-image: linear-gradient(red orange);
-    padding: 10px 40px;
+    font-size: 55px;
+    position: relative;
+    margin-bottom: 0px;
+    padding-left: 850px;
+    padding-top: 20px;
 }
+.login-form{
+    padding-left: 775px;
+    margin-top: 40px;
+    font-size: 30px;
+    background: lightcoral;
+} 
