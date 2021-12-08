@@ -102,13 +102,25 @@ ul li a:hover{
 
 }
 .login-button{
+    
 text-decoration: none;
 position: relative;
 padding:10px 20px ;
-padding-left: 10px;
+padding-left: 40px;
 padding-right: 10px;
 border-radius: 5px;
 background-image: linear-gradient(skyblue,blue);
+}
+input[type="button"]{
+    width: 270px;
+    height: 30px;
+    padding-left: 40px;
+    margin-top: 20px;
+    border: none;
+    font-size: 20px;
+    color: rgb(orange, green, blue);
+    background-color: saddlebrown;
+    transition: ease-in-out 0.3s;
 }
 .loginmain{
     width: 100%;
@@ -119,21 +131,21 @@ background-image: linear-gradient(skyblue,blue);
     
 }
 .login-edit{
+    text-align: center;
     font-size: 55px;
     position: relative;
     margin-bottom: 0px;
-    padding-left: 600px;
+    
     padding-top: 20px;
 }
 .login-form{
-    padding-left: 500px;
-    margin-top: 40px;
-    font-size: 30px;
-    background: lightcoral;
-    display:inline;
-    width: 300px;
-    height: 200px;
-    display: inline-block;
+    padding-top: 20px;
+    width: 360px;
+    height: 620px;
+    margin: auto;
+    background-color: none;
+    border-radius: 4px;
+    border-color: aqua;
     
 
 }
@@ -166,4 +178,13 @@ padding-right: 10px;
 border-radius: 5px;
 padding-top: 15px;
 background-image: linear-gradient(skyblue,blue);
+}
+form input{/*editing the form */
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border: 1px solid blue;
+    border-radius: 10px;
+    outline: none;
+
 }
