@@ -193,3 +193,54 @@ form input{/*editing the form */
     color: salmon;
     padding-top: 7px;
 }
+.Background_S{
+    display: flex;
+    text-decoration: none;
+    position: relative;
+    padding:20px 20px ;
+    padding-left: 10px;
+    padding-right: 30px;
+    border-radius: 5px;
+    
+    
+}
+.Background_S{
+    width: 100%;
+    background: url(images/IQ\ Image\ tech\ 2.jpeg);
+    background-position: center;
+    background-size: cover;
+    height: 109vh;
+    
+}
+.Signup_box{
+    text-align: center;
+    font-size: 50px;
+    position: relative;
+    margin-bottom: 0px;
+    
+    padding-top: 20px;
+}
+.sign_up{
+    background:lightsteelblue;
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+    background-image: linear-gradient(rgb(194, 194, 40), rgb(208, 228, 33));
+    margin-bottom: 0px;
+    top: 100px;
+    left: 100px;
+    padding: 10px 15px;
+    border-radius: 5px;
+     padding-left: 20px;
+    padding-right: 20px;
+
+}
+.line{
+    color: lightyellow;
+    font-size: 20px;
+    padding-right: 400px;
+    display: flex;
+}
+.SIGN{
+    color: lightyellow;
+}

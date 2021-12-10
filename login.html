@@ -11,14 +11,57 @@
             <form> <div class="login-form">
                <p>Name: <input type="email" name="Email" placeholder="Email"></p>
                <p>Password: <input type="password" name="Password" placeholder="Password"></p> 
-                <input type="button" value="LogIn">
+                <button onclick="login()">Login</button>
+                <p id="loginPara"></p>
+                <p id="Loginfailed"></p>
                 <p class="DHA">Don't have an account? <a href="signup.html">SignUp</a></p>
 
             </div>
                
-            </form>
+        </form>
+        <script>
+            window.onload = checkLogin;//Check to see if user is logged in already
+    
+            function checkLogin(){
+                if(sessionStorage.loggedInUsrEmail !== undefined){
+                    //Extract details of logged in user
+                    let usrObj = JSON.parse(localStorage[sessionStorage.loggedInUsrEmail]);
+                    
+                    //Say hello to logged in user
+                    document.getElementById("loginPara").innerHTML = usrObj.email + " logged in.";
+                }
+            }
             
-        </div>
-    </div>
+            let cookies = document.cookie;
+    
+            function login(){
+                //Get email address
+                let email = document.getElementById("emailInput").value;
+                
+                //User does not have an account
+                if(localStorage[email] === undefined){
+                    //Inform user that they do not have an account
+                    document.getElementById("loginfailed").innerHTML = "Email doesnt match?";
+                    return; //Do nothing else
+                }
+                else{//User has an account
+                    let usrObj = JSON.parse(localStorage[email]);//Convert to object
+                    let password = document.getElementById("passwordInput").value;
+                    if(password === usrObj.password){//Successful login
+                        document.getElementById("loginPara").innerHTML = usrObj.email + " logged in.";
+                        document.getElementById("loginfailed").innerHTML = "";//Clear any login failures
+                        sessionStorage.loggedInUsrEmail = usrObj.email;
+                    }
+                    else{
+                        document.getElementById("loginFailed").innerHTML = "incorrect password";
+                    }
+                }
+            }
+        </script>
+    
+
+
+</head>
 </body>
-</html>
+    
+      
